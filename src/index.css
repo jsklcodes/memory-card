@@ -1,0 +1,92 @@
+/* MARK: Base styles */
+:root {
+  font-size: 62.5%;
+}
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui,
+    helvetica neue, Cantarell, Ubuntu, roboto, noto, helvetica, arial,
+    sans-serif;
+  font-size: 1.6rem;
+  line-height: 1.6;
+}
+
+h1 {
+  font-size: 2.4rem;
+  font-weight: 700;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+/* MARK: Utils */
+.text-bold {
+  font-weight: 600;
+}
+
+.text-small {
+  font-size: 1.4rem;
+}
+
+.container {
+  width: min(100% - 4rem, 96rem);
+  margin-inline: auto;
+}
+
+/* MARK: Header */
+.header > .container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.8rem;
+}
+
+.header {
+  padding: 2rem;
+  background-color: #222;
+  color: #eee;
+  margin-bottom: 3.2rem;
+}
+
+/* MARK: ScoreBar */
+.score-bar {
+  display: grid;
+  align-content: center;
+}
+
+/* MARK: GameBoard */
+.game-board {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
+  gap: 0.8rem;
+  padding-block: 3.2rem 6.4rem;
+}
+
+/* MARK: GameCard */
+.game-card {
+  aspect-ratio: 1 / 1;
+  transition: box-shadow 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55),
+    scale 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.game-card:hover {
+  box-shadow: 0 0 0 0.4rem #9a10f7;
+  scale: 0.96;
+  cursor: pointer;
+}
+
+.game-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
