@@ -7,6 +7,7 @@ export const GameCard = ({
   setScore,
   bestScore,
   setBestScore,
+  shuffleCharacters,
 }) => {
   const [hasBeenClicked, setHasBeenClicked] = useState(false);
 
@@ -25,6 +26,7 @@ export const GameCard = ({
     } else {
       setScore(score => score + 1);
       setHasBeenClicked(true);
+      shuffleCharacters();
     }
   };
 

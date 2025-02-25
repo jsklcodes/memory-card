@@ -4,6 +4,9 @@ import { GameCard } from './GameCard';
 export const GameBoard = ({ score, setScore, bestScore, setBestScore }) => {
   const [characters, setCharacters] = useState([]);
 
+  const shuffleCharacters = () => characters.sort(() => Math.random() - 0.5);
+  shuffleCharacters();
+
   useEffect(() => {
     const fetchCharacters = async () => {
       const response = await fetch(
@@ -32,6 +35,7 @@ export const GameBoard = ({ score, setScore, bestScore, setBestScore }) => {
           setScore={setScore}
           bestScore={bestScore}
           setBestScore={setBestScore}
+          shuffleCharacters={shuffleCharacters}
         />
       ))}
     </main>
