@@ -10,7 +10,7 @@ export const GameBoard = ({ score, setScore, bestScore, setBestScore }) => {
   useEffect(() => {
     const fetchCharacters = async () => {
       const response = await fetch(
-        'https://rickandmortyapi.com/api/character/1,2,3,4,5,6,7,8,9,10'
+        'https://rickandmortyapi.com/api/character/1,2,3,4,5,6,7,8,9,10,20,21,22,23,24,25,26,27,28,29'
       );
       const data = await response.json();
       const mappedData = data.map(({ id, name, image }) => ({
