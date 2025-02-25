@@ -74,6 +74,7 @@ img {
 
 /* MARK: GameCard */
 .game-card {
+  position: relative;
   aspect-ratio: 1 / 1;
   transition: box-shadow 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55),
     scale 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
@@ -89,4 +90,14 @@ img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.game-card figcaption {
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+  padding: 0.4rem;
+  background-color: hsla(0, 0%, 3%, 0.5);
+  color: #eee;
+  width: 100%;
 }
