@@ -1,7 +1,7 @@
-export const GameCard = () => {
+export const GameCard = ({ name, image }) => {
   return (
     <picture className="game-card">
-      <img src="https://placehold.co/180" alt="" />
+      <img src={image} alt="" />
     </picture>
   );
 };
