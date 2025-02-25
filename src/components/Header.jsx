@@ -1,6 +1,6 @@
 import { ScoreBar } from './ScoreBar';
 
-export const Header = () => {
+export const Header = ({ score, bestScore }) => {
   return (
     <header className="header">
       <div className="container">
@@ -11,7 +11,7 @@ export const Header = () => {
             twice.
           </p>
         </div>
-        <ScoreBar />
+        <ScoreBar score={score} bestScore={bestScore} />
       </div>
     </header>
   );

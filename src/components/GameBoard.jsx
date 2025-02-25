@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { GameCard } from './GameCard';
 
-export const GameBoard = () => {
+export const GameBoard = ({ score, setScore, bestScore, setBestScore }) => {
   const [characters, setCharacters] = useState([]);
 
   useEffect(() => {
@@ -25,7 +25,14 @@ export const GameBoard = () => {
   return (
     <main className="game-board container">
       {characters.map(character => (
-        <GameCard key={character.id} {...character} />
+        <GameCard
+          key={character.id}
+          {...character}
+          score={score}
+          setScore={setScore}
+          bestScore={bestScore}
+          setBestScore={setBestScore}
+        />
       ))}
     </main>
   );
