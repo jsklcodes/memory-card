@@ -1,7 +1,8 @@
 export const GameCard = ({ name, image }) => {
   return (
-    <picture className="game-card">
+    <figure className="game-card">
       <img src={image} alt="" />
-    </picture>
+      <figcaption className="text-small text-bold">{name}</figcaption>
+    </figure>
   );
 };
